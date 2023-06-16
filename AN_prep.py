@@ -9,7 +9,7 @@ image_transforms = {
         transforms.RandomHorizontalFlip(),
         transforms.CenterCrop(size = 224), # do we need this? the cells are not in the center of the frame.
         transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
     ]),
         'test': transforms.Compose([
             transforms.Resize(size = 256), 
@@ -43,6 +43,7 @@ def classIdentification(dataset):
     print(idx_to_class)
 
     train_data_size = len(data['train'])
+    print(train_data_size)
     test_data_size = len(data['test'])
     valid_data_size = len(data['valid'])
 
@@ -52,3 +53,5 @@ def classIdentification(dataset):
     return train_data_loader, train_data_size, test_data_loader, test_data_size, valid_data_loader, valid_data_size, idx_to_class
 
 train_data_loader, train_data_size, test_data_loader, test_data_size, valid_data_loader, valid_data_size, idx_to_class = classIdentification(ds.dataset)
+print(type(train_data_loader))  # it is a dictionary
+print(len(train_data_loader['train']))

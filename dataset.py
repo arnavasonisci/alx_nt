@@ -1,1 +1,1 @@
-dataset = r'F:\Projects\MyLab\al_net\dataset'
+dataset = r'\al_net\dataset'

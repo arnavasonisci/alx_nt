@@ -1,14 +1,14 @@
 from myimports import os, train_test_split, shutil
 
-foc_fol_path = r"F:\Projects\MyLab\foc_unfoc\focused"
-train_foc_fol = r"F:\Projects\MyLab\al_net\dataset\training\focused" # has focused training data
-test_foc_fol = r"F:\Projects\MyLab\al_net\dataset\testing\focused" # has focused testing data
-val_foc_fol = r'F:\Projects\MyLab\al_net\dataset\validation\focused'
+foc_fol_path = r"\foc_unfoc\focused"
+train_foc_fol = r"\al_net\dataset\training\focused" # has focused training data
+test_foc_fol = r"\al_net\dataset\testing\focused" # has focused testing data
+val_foc_fol = r'\al_net\dataset\validation\focused'
 
-unfoc_fol_path = r"F:\Projects\MyLab\foc_unfoc\unfocused"
-train_unfoc_fol = r"F:\Projects\MyLab\al_net\dataset\training\unfocused" # has unfocused training data
-test_unfoc_fol = r"F:\Projects\MyLab\al_net\dataset\testing\unfocused" # has unfocused testing data
-val_unfoc_fol = r"F:\Projects\MyLab\al_net\dataset\validation\unfocused"
+unfoc_fol_path = r"\foc_unfoc\unfocused"
+train_unfoc_fol = r"\al_net\dataset\training\unfocused" # has unfocused training data
+test_unfoc_fol = r"\al_net\dataset\testing\unfocused" # has unfocused testing data
+val_unfoc_fol = r"\al_net\dataset\validation\unfocused"
 
 try:
     if not os.path.exists(val_foc_fol):
